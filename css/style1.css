@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    margin-block-end: initial;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+
+header{
+    width: 100%;
+    height: 155px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: #27ae60;
+}
+
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+header .logo{
+    flex: 1;
+    color: #fff;
+    margin-left: 60px;
+    text-transform: uppercase;
+}
+
+header .searchbox{
+    flex: 2;
+    position: relative;
+   
+}
+
+.searchbox input[type="text"]{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 30px;
+    color: rgb(109, 107, 107);
+    font-size: 16px;
+    text-align: center;
+
+}
+
+.searchbox button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0.9);
+    background: gray;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+ul {
+      list-style: none;
+      padding: 10px;
+      margin-left: 10px;
+    }
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    /* Increase icon size */
+    .fa-book-open,
+    .fa-circle-user {
+      font-size: 40px;
+      margin-left: 20px; /* Adjust space between icon and text */
+      vertical-align: right;  /* Change this value to adjust the size */
+    }
+
+    h1{
+       
+     
+        font-size: 45px;
+        color:black;
+       
+        margin: 0px 65px;
+          position: relative;
+          top: 200px;
+        
+          display: flex;
+        
+          flex-wrap: wrap;
+   
+          justify-content: left;
+          
+          text-align: left;
+          gap: 10px;
+       
+    }
+
+.content{
+
+
+  padding: 30px 500px;
+   margin: -35px 50px;
+
+        position: relative;
+        top: 269px;
+      
+      
+      
+        background-color: rgb(192, 187, 187);
+        text-align: center;
+     
+        }
+
+
+        .img-card img{
+          padding: 10px;
+          margin: 603px 18px;
+          margin-top: 25px;
+          margin-left: -690px;
+           
+            box-shadow: 2px 2px 10px #27ae60;
+            flex: 1 ;
+    
+         
+           
+            background-color: #ffffff;
+            background-size: contain;
+           
+            border-radius: 15px;
+           
+            }
+
+            .content button {
+                
+              padding: 16px;
+              margin: 60px -265px 83px -295px;
+              background-color: #27ae60;
+              color: white;
+              border: none;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              text-align: left;
+              }
+              
+              .content button:hover {
+                background-color: #1b653a;
+              }
+              .content h2{display: flex;
+              margin-left: 110px;
+                margin-top: -860px;
+                text-align: center;
+                font-size: 50px;
+                
+              }
+
+              .txtbox {
+                margin: 0px 105px;
+                padding: 0px 12px;
+                margin-bottom: -47px;
+                margin-top: 19px;
+                line-height: 40px;
+                text-align: left;
+                font-size: 25px;
+            }
+            .des {
+              padding: 40px;
+              margin: -23px -334px 15px;
+            
+              background-color: rgb(223, 223, 223);
+              text-align: left;
+              line-height: 20px;
+          }
+
+               
+              @media screen and (max-width: 600px){
+                header{
+                  height: 165px;
+                }
+                .card {
+                    flex: 1 0 calc(50% - 10px);
+            
+                    position: relative;
+                    right: 16%;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            
+                h1 {
+                  display: flex;
+                  margin: 0px 20px;
+                  position: absolute;
+                  left: 40px;
+                
+                  top: 150px;
+                }
+                .content h2 {
+                  display: flex;
+                  margin: 108px 53px;
+                  margin-bottom: 78px;
+                  position: absolute;
+                }
+
+                li {
+                  display: block;
+                  margin-bottom: 10px;
+                }
+                   .txtbox{
+                    
+                    line-height: 1.5;
+                    margin: 68px;
+                    margin-bottom: -128px;
+                    position: absolute;
+                }
+
+                .txtbox br {
+                  margin-bottom: 10px;
+                  display: none;
+                }
+                .content button {
+                  padding: 16px;
+                  margin: -45px -56px -415px -199px;
+                  position: absolute;
+                  background-color: #27ae60;
+                  color: white;
+                  border: none;
+                  border-radius: 10px;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                  text-align: left;
+              }
+                
+                .content {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+              }
+              .des {
+                position: absolute;
+                padding: 46px;
+                margin-bottom: -1299px;
+                margin-left: -156px;
+                margin-right: -10px;
+                background-color: rgb(223, 223, 223);
+                text-align: left;
+                line-height: 20px;
+                right: 30px;
+                left: 184px;
+                
+            }
+            .content {
+              padding: 30px 10px;
+              padding-bottom: 668px;
+              margin: -28px 45px;
+              margin-bottom: 30%;
+              position: relative;
+              top: 269px;
+              flex-wrap: wrap;
+              justify-content: center;
+              background-color: rgb(192, 187, 187);
+              text-align: center;
+              gap: 10px;
+          }
+              
+            }            

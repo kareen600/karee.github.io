@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Metadata for the webpage, defining it as a 'bookstore' -->
+    <meta name="bookstore" content="online bookstore" />
+    <!-- Title of the webpage displayed in the browser tab -->
+    <title>Book Store</title>
+    <!-- Linking an external stylesheet 'style.css' from the 'css' folder -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <!-- Linking an external library for icons from a CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+
+<body>
+
+    <script>
+        // Function to perform search functionality
+        function search() {
+            // Get the search query and convert it to uppercase
+            let filter = document.getElementById('srch').value.toUpperCase();
+            // Get all elements with the class 'card'
+            let items = document.querySelectorAll('.card');
+    
+            // Loop through each 'card' element
+            for (let i = 0; i < items.length; i++) {
+                // Find the title within each 'card' element
+                let title = items[i].querySelector('.title');
+                // Extract the text content of the title and convert it to uppercase
+                let value = title.innerHTML || title.innerText || title.textContent;
+                value = value.toUpperCase();
+    
+                // Check if the search query matches the title text content
+                if (value.indexOf(filter) > -1) {
+                    // Display the matched element
+                    items[i].style.display = "";
+    
+                    // Show the hidden div with book details when a match is found
+                    let hiddenDiv = items[i].querySelector('.txtbox');
+                    if (hiddenDiv) {
+                        hiddenDiv.style.display = ""; // Show the hidden div
+                    }
+                } else {
+                    // Hide the unmatched element
+                    items[i].style.display = "none";
+    
+                    // Hide the hidden div when no match is found
+                    let hiddenDiv = items[i].querySelector('.txtbox');
+                    if (hiddenDiv) {
+                        hiddenDiv.style.display = "none"; // Hide the hidden div
+                    }
+                }
+            }
+        }
+    </script>
+    
+    
+
+    <header>
+        <!-- Logo section for the bookstore -->
+        <div class="logo"><h2>Welcome to our bookstore</h2></div>
+    
+        <!-- Search box for users to search for books -->
+        <div class="searchbox">
+            <!-- Input field for entering search queries -->
+            <input type="text" name="search" id="srch" placeholder="search your book..." onkeyup="search()">
+            <!-- Button to submit the search query -->
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+    
+        <!-- List of icons for navigation -->
+        <ul class="icon-list">
+            <!-- Icon and link for 'My Booklist' -->
+            <li>
+                <a href="mybooks.html"><i class="fa-solid fa-book-open"></i></a>
+                <a href="">My Booklist</a>
+            </li>
+            <!-- Icon and link for 'Create Account' -->
+            <li>
+                <a href="useracc.aspx"><i class="fa-solid fa-circle-user"></i></a>
+                <a href="">Create Account</a>
+            </li>
+        </ul>
+    </header>
+    
+   <h1><b> Featured Books </b></h1>
+
+   <div class="content">
+    <!-- First book card: Clean Code -->
+    <div class="card">
+        <div class="image"><a href="cleancode.html"> <img src="pictures/cleancode.jpg"></a></div>
+        <div class="title"> Clean Code </div>
+        <div class="des">
+            <!-- Description of "Clean Code" book by Robert C. Martin -->
+            <p> Clean Code" by Robert C. Martin offers practical guidelines for writing understandable, maintainable, and efficient code through principles and patterns for software craftsmanship...</p>
+        </div>
+        <!-- Hidden div containing book details: Author, Genre, and Price -->
+        <div class="txtbox" style="display: none;"><b>Author:</b> Robert C. Martin <br> <b>Genre:</b> Science <br><b>Price:</b> $10.99</div>
+    </div>
+    <!-- Other book cards follow a similar structure -->
+
+    <div class="card">
+        <div  class="image"><a href="grit.html"> <img src="pictures/grit1.jpg" ></a> </div>
+        <div  class="title"> Grit </div>
+        <div  class="des">
+            <p> Grit: The Power of Passion and Perseverance" by Angela Duckworth explores the role of resilience and dedication in achieving success, emphasizing how passion and sustained effort drive accomplishment, 
+                backed by insightful research and compelling anecdotes. </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Angela Duckworth <br> <b>Genre:</b> psychology <br><b>Price:</b> $5.66</div>
+    </div>
+
+    <div class="card">
+        <div  class="image"><a href="thebox.html"> <img src="pictures/thebox.jpg"> </a></div>
+        <div  class="title"> The Box </div>
+        <div  class="des">
+            <p> "The Box" by Marc Levinson explores how the standardized shipping container revolutionized global trade,
+                 transforming logistics and commerce. This book vividly illustrates how this simple invention reshaped economies and shrank the world....</p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Marc Levinson <br> <b>Genre:</b> economic  <br><b>Price:</b> $7.46</div>
+    </div>
+
+    <div class="card">
+        <div  class="image"><a href="Thinking-Fast-and-Slow.html">  <img src="pictures/Thinkingfastandslow.jpg"></a> </div>
+        <div  class="title">Thinking, Fast and Slow</div>
+        <div  class="des">
+            <p> Thinking, Fast and Slow" by Daniel Kahneman explores our dual thinking systems: intuitive, fast, prone to biases (System 1) and logical, deliberate (System 2). Revealing mental shortcuts and errors, it dissects decision-making intricacies,
+                 offering insights into human cognition and decision processes </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Daniel Kahneman <br> <b>Genre:</b>  psychology  <br><b>Price:</b> $2.44</div>
+    </div>
+
+    <div class="card">
+        <div  class="image"> <a href="The-Structure-of-Scientific.html"> <img src="pictures/The Structure of Scientific Revolutions.jpg"> </a></div>
+        <div  class="title">The Structure of Scientific  <br>Revolutions </div>
+        <div  class="des">
+            <p> The Structure of Scientific Revolutions" examines how scientific paradigms shift, challenging established beliefs and introducing new ways of thinking. It explores the process of scientific 
+                change and the impact of revolutionary ideas within the scientific community.. </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Thomas Kuhn <br> <b>Genre:</b> philosophy  <br><b>Price:</b> $3.24</div>
+    </div>
+
+    <div class="card">
+        <div  class="image"> <a href="Guns-Germs-and-Steel.html"> <img src="pictures/Guns, Germs, and Stee.jpg"></a> </div>
+        <div  class="title">Guns, Germs, and Steel </div>
+        <div  class="des">
+            <p>Guns, Germs, and Steel" by Jared Diamond examines the roots of societal inequalities, exploring how geographic advantages, technology, and culture shaped human history. It delves into the complex 
+                interplay of factors influencing civilizations' trajectories across time.... </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Jared Diamond <br> <b>Genre:</b> non-fiction <br><b>Price:</b> $10.64</div>
+    </div>
+  
+
+    <div class="card">
+        <div  class="image"><a href="The-Sociological-Imagination.html"> <img src="pictures/The Sociological Imagination.jpg"> </a> </div>
+        <div  class="title">The Sociological Imagination </div>
+        <div  class="des">
+            <p> The Sociological Imagination" by C. Wright Mills explores how individuals’ lives are shaped by social forces. It urges understanding personal troubles within larger social contexts, encouraging a perspective that connects 
+                personal experiences to societal structures and historical factors.</p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> C. Wright Mills <br> <b>Genre:</b>  psychology <br><b>Price:</b> $3.46</div>
+    </div>
+
+  
+
+    <div class="card">
+        <div  class="image"><a href="Meditations.html"> <img src="pictures/Meditations.jpg"></a> </div>
+        <div  class="title"> Meditations </div>
+        <div  class="des">
+            <p> Meditations" is a collection of personal reflections by Roman Emperor Marcus Aurelius, offering profound insights on Stoicism, virtue, and self-improvement. Written as a guide for self-mastery, it emphasizes resilience,
+                 acceptance of life's challenges, and the pursuit of inner tranquility. </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Stuart Russell <br> <b>Genre:</b> science <br><b>Price:</b> $5.76</div>
+    </div>
+
+    <div class="card">
+        <div  class="image"><a  href="thejoyofx.html"> <img src="pictures/bookxx.jpeg"></a> </div>
+        <div  class="title"> The Joy of x </div>
+        <div  class="des">
+            <p>"The Joy of x" by Steven Strogatz is a delightful journey through mathematics, revealing its beauty and relevance. With clarity and passion, it explores math's wonders, from simple concepts to complex 
+                theories, making it accessible and captivating for all curious minds </p>
+        </div>
+        <div class="txtbox" style="display: none;"><b>Author:</b> Steven Strogat <br> <b>Genre:</b> science <br><b>Price:</b> $5.76</div>
+    </div>
+
+   </div>
+    
+
+
+        
+ 
+   <footer>
+    <p>@kareen_189456</p>
+  </footer>
+
+ 
+
+
+
+   
+    
+   
+    
+</body>
+
+</html>
